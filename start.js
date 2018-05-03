@@ -1,7 +1,10 @@
 
-jQuery.noConflict();
-(function($) {
-  $(function() {
+// jQuery.noConflict();
+// (function($) {
+//   $(function() {
+//   });
+// })(jQuery);
+
     var data = { type: "FROM_URL", text: "Hello from the webpage!" };
     window.postMessage(data, "*");
 
@@ -16,7 +19,3 @@ jQuery.noConflict();
     firebase.initializeApp(config);
 
     var db = firebase.database();
-  });
-})(jQuery);
-
-
