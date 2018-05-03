@@ -2,7 +2,7 @@
 jQuery.noConflict();
 (function($) {
   $(function() {
-    var data = { type: "FROM_PAGE", text: "Hello from the webpage!" };
+    var data = { type: "FROM_URL", text: "Hello from the webpage!" };
     window.postMessage(data, "*");
 
       // The ID of the extension we want to talk to.
