@@ -4,17 +4,17 @@ jQuery.noConflict();
   $(function() {
     var data = { type: "FROM_URL", text: "Hello from the webpage!" };
     window.postMessage(data, "*");
-
-      // The ID of the extension we want to talk to.
-      var editorExtensionId = "abcdefghijklmnoabcdefhijklmnoabc";
-
-      // Make a simple request:
-      chrome.runtime.sendMessage(editorExtensionId, {openUrlInEditor: data.text},
-        function(response) {
-          if (response.success) {
-            console.log('succ');
-          }
-        }
-      );
+    
+    var config = {
+      apiKey: "AIzaSyDsYOfdNSuPPkJeoNlOCz9c4TUX-ln3Op0",
+      authDomain: "keychain-web.firebaseapp.com",
+      databaseURL: "https://keychain-web.firebaseio.com",
+      projectId: "keychain-web",
+      storageBucket: "keychain-web.appspot.com",
+      messagingSenderId: "269609860531"
+    };
+    firebase.initializeApp(config);
+    
+    var db = firebase.database();
   });
 })(jQuery);
