@@ -9,7 +9,7 @@ jQuery.noConflict();
       var editorExtensionId = "abcdefghijklmnoabcdefhijklmnoabc";
 
       // Make a simple request:
-      chrome.runtime.sendMessage(editorExtensionId, {openUrlInEditor: url},
+      chrome.runtime.sendMessage(editorExtensionId, {openUrlInEditor: data.text},
         function(response) {
           if (response.success) {
             console.log('succ');
