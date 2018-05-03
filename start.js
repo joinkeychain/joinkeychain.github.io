@@ -10,9 +10,11 @@ jQuery.noConflict();
 
       // Make a simple request:
       chrome.runtime.sendMessage(editorExtensionId, {openUrlInEditor: url},
-      function(response) {
-        if (!response.success)
-          handleError(url);
-      });
+        function(response) {
+          if (response.success) {
+            console.log('succ');
+          }
+        }
+      );
   });
 })(jQuery);
