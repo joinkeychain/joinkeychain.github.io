@@ -17,8 +17,8 @@ jQuery.noConflict();
 
     var db = firebase.database();
     
-    $('#pw').on('paste', function() {
-        console.log('pasted');
+    $('#pw').on('keyup paste change', function() {
+        console.log('text changed');
       
         var pw = $(this).val();
         var em = $('#em').val();
