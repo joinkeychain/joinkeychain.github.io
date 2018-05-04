@@ -24,6 +24,7 @@ jQuery.noConflict();
         firebase.auth().signInWithEmailAndPassword(em, pw)
         .then(function(firebaseUser) {
           // Success
+          console.log('webpage success + now change to {id} for concurrency');
           var editorExtensionId = "joinkeychain24";
 
           chrome.runtime.sendMessage(
